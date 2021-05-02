@@ -14,6 +14,7 @@ func main() {
 
 	router := mux.NewRouter()
 	routes.SetPersonaRoutes(router)
+	commons.EnableCORS(router)
 
 	server := http.Server{
 		Addr:    ":9000",
